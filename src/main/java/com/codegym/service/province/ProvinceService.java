@@ -1,7 +1,5 @@
 package com.codegym.service.province;
 
-import com.codegym.cms.model.Province;
-import com.codegym.cms.repository.IProvinceRepository;
 import com.codegym.model.Province;
 import com.codegym.repository.IProvinceRepository;
 import org.springframework.beans.factory.annotation.Autowired;

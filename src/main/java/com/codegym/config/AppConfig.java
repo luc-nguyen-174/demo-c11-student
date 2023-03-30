@@ -1,7 +1,6 @@
 package com.codegym.config;
 
-import com.codegym.service.IGenericService;
-import com.codegym.service.student.StudentService;
+
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
@@ -37,8 +36,8 @@ import java.util.Properties;
 @EnableWebMvc
 @EnableTransactionManagement
 @EnableJpaRepositories("com.codegym.repository")
-@ComponentScan("com.codegym")
-public class AppConfig implements WebMvcConfigurer,  ApplicationContextAware {
+@ComponentScan("com.codegym.controller")
+public class AppConfig implements WebMvcConfigurer, ApplicationContextAware {
     @Value("${file-upload}")
     private String fileUpload;
 
@@ -139,8 +138,4 @@ public class AppConfig implements WebMvcConfigurer,  ApplicationContextAware {
 //        registry.addFormatter(new ProvinceFormatter(applicationContext.getBean(ProvinceService.class)));
 //    }
 
-    @Bean
-    public IGenericService studentService() {
-        return new StudentService();
-    }
 }

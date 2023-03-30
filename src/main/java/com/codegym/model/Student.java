@@ -23,6 +23,12 @@ public class Student {
         this.avt = avt;
     }
 
+    public Student(Long id, String name, String avt) {
+        this.id = id;
+        this.name = name;
+        this.avt = avt;
+    }
+
     public Long getId() {
         return id;
     }
